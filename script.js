@@ -20,9 +20,7 @@ function getHumanChoice()
     return prompt("Your Choice? ");
 }
 
-let humanScore=0;
-let computerScore =0;
-console.log(getComputerChoice());
+
 
 function playRound(humanChoice, computerChoice)
 {
@@ -67,22 +65,3 @@ function playRound(humanChoice, computerChoice)
     
 }
 
-for(let i=0;i<5;i++)
-{
-    const humanChoice = getHumanChoice();
-    const computerChoice = getComputerChoice();
-    playRound(humanChoice,computerChoice);
-    console.log(`Your Score : ${humanScore}\nComputer Score : ${computerScore}`);
-}
-if(humanScore>computerScore)
-{
-    console.log("You WIN");
-}
-else if(computerScore>humanScore)
-{
-    console.log("YOU LOSE");
-}
-else
-{
-    console.log("DRAW");
-}
