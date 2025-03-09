@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="resultpage.css">
+</head>
+<body>
+    <div class="win">
+
+    </div>
+
+    <button class="again">Play Again</button>
+    <button class="home">Home</button>
+    <script>
+        const again = document.querySelector(".again");
+        const home = document.querySelector(".home");
+        document.addEventListener("DOMContentLoaded", () => {
+            const winner = localStorage.getItem("winner") || "No one";
+            document.querySelector(".win").textContent = `${winner} Wins The Game!`;
+        });
+
+        again.addEventListener("click",()=>
+    {
+        window.location.href="gamepage.html";
+    });
+    home.addEventListener("click",()=>
+    {
+        window.location.href="index.html";
+    });
+
+    </script>
+</body>
+</body>
+</html>
